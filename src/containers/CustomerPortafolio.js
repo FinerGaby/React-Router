@@ -1,36 +1,20 @@
 import React, { Component } from 'react';
-import Portada from '../components/Home/Portada';
-import Services from '../components/Home/Services';
-import Portafolio from '../components/Home/Portafolio';
-import AppFrame from '../components/AppFrame';
+import PortafolioPagina from '../components/Home/PortafolioPagina';
 
-
-
-class CustomerContainer extends Component {
-   
-   renderBody = ({consumirArray, portafolioArray}) => (
-        <div>
-        <Portada textoPortada={'"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor . '} 
-                         buttonText={'Ver productos'} />
-                <Services consumirArray={consumirArray} 
-                          ourServices={'Our Services'} />
-                <Portafolio 
-                portafolioTexto={'Portafolio'}
-                portafolioArray={portafolioArray} />
-        </div>
-    )
-
+class CustomerPortafolio extends Component {
     render() {
         return (
-            <div>
-                <AppFrame  
-                  body={this.renderBody(this.props)}></AppFrame>
-            </div>
+            <React.Fragment>
+            <PortafolioPagina 
+                portafolioTexto={'Portafolio'}
+                portafolioArray={this.props.portafolioArray} />
+            </React.Fragment>
         );
     }
 }
 
-CustomerContainer.defaultProps = {
+
+CustomerPortafolio.defaultProps = {
     consumirArray: [
         {
             "imagenServices" : "WebDesing",
@@ -100,5 +84,4 @@ CustomerContainer.defaultProps = {
     ]
 }
 
-
-export default CustomerContainer;
+export default CustomerPortafolio;
