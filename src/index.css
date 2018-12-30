@@ -172,6 +172,29 @@ code {
   position: relative;
 }
 
+
+.TituloPagina {
+  height: 100px;
+  line-height: 100px;
+  background: green;
+  font-size: 30px;
+  text-align: left;
+  color: white;
+  font-weight: bold;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.containerAbout {
+  padding: 20px;
+  width: 90%;
+  font-size: 20px;
+  text-align: left;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+
 .footer {
   background: #171414;
   padding: 15px;

@@ -8,8 +8,11 @@ const NavMenu = props => {
                 <li>
                     <Link to="/">Inicio</Link>
                 </li>
+                <li>
+            <Link to="/about">Blog</Link>
+            </li>
             <li>
-            <Link to="/about">¿Quien soy?</Link>
+            <Link to="/about">About</Link>
             </li>
             <li>
             <Link to="/portafolio">Portafolio</Link>

@@ -1,20 +1,32 @@
 import React, { Component } from 'react';
-import PortafolioPagina from '../components/Home/PortafolioPagina';
+import TituloPagina from '../components/About/TituloPagina';
+import Galeria from '../components/PortafolioList/Galeria';
+import AppFrame from '../components/AppFrame';
 
-class CustomerPortafolio extends Component {
+class CustomersPortafolio extends Component {
+ 
+    renderBody = obtenerCuatro => (
+        <div>
+            <TituloPagina tituloPagina={`${this.props.textoPortafolio}`} />
+            <Galeria obtenerCuatro={obtenerCuatro} />
+        </div>
+    )
+
     render() {
+       const obtenerCuatro = this.props.portafolioArray.find( c => c.textoPortafolio === this.props.textoPortafolio);
+
+        console.log(obtenerCuatro);
         return (
-            <React.Fragment>
-            <PortafolioPagina 
-                urlPath={'portafolio/'}
-                portafolioArray={this.props.portafolioArray} />
-            </React.Fragment>
+            <div>
+            <AppFrame body={this.renderBody(obtenerCuatro)} />
+            </div>
         );
     }
 }
 
 
-CustomerPortafolio.defaultProps = {
+
+CustomersPortafolio.defaultProps = {
     consumirArray: [
         {
             "imagenServices" : "WebDesing",
@@ -84,4 +96,5 @@ CustomerPortafolio.defaultProps = {
     ]
 }
 
-export default CustomerPortafolio;
+
+export default CustomersPortafolio;

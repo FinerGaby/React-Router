@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
-const PortafolioChild = ({textoPortafolio, descripcionPortafolio, imagenPortfolio, categoriaPortafolio}) => {
+
+const PortafolioChild = ({textoPortafolio, descripcionPortafolio, imagenPortfolio, categoriaPortafolio, urlPath}) => {
 
     const divStyle = {
         backgroundImage: `url('img/${imagenPortfolio}.png')`
@@ -14,7 +16,7 @@ const PortafolioChild = ({textoPortafolio, descripcionPortafolio, imagenPortfoli
         <article style={divStyle} className="portafolioChild">
             <div className="informacion-portafolio">
                 {categoriaCSS}
-            <h1>{textoPortafolio}</h1>
+             <Link to={`${urlPath}${textoPortafolio}`}><h1>{textoPortafolio}</h1></Link>
             <h2>{descripcionPortafolio}</h2>
             </div>
         </article>
