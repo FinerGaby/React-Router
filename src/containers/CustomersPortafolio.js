@@ -5,20 +5,20 @@ import AppFrame from '../components/AppFrame';
 
 class CustomersPortafolio extends Component {
  
-    renderBody = obtenerCuatro => (
+    renderBody = filtradoArray => (
         <div>
             <TituloPagina tituloPagina={`${this.props.textoPortafolio}`} />
-            <Galeria obtenerCuatro={obtenerCuatro} />
+            <Galeria obtenerFiltrado={filtradoArray} />
         </div>
     )
 
     render() {
-       const obtenerCuatro = this.props.portafolioArray.find( c => c.textoPortafolio === this.props.textoPortafolio);
+       const filtradoArray = this.props.portafolioArray.find( c => c.textoPortafolio === this.props.textoPortafolio)
 
-        console.log(obtenerCuatro);
+        console.log(filtradoArray);
         return (
             <div>
-            <AppFrame body={this.renderBody(obtenerCuatro)} />
+            <AppFrame body={this.renderBody(filtradoArray)} />
             </div>
         );
     }
@@ -47,50 +47,58 @@ CustomersPortafolio.defaultProps = {
     portafolioArray: [
         {
             "imagenPortfolio" : "a1",
+            "galeriaPortafolio" : ["a1", "a1", "a1", "a1", "a1", "a1"],
             "textoPortafolio" : "Portada1",
-            "descripcionPortafolio" : "Descripcion1",
+            "descripcionPortafolio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
             "categoriaPortafolio" : ["MyBB", "Wordpress", "Drupal"],
         },
         {
             "imagenPortfolio" : "a1",
+            "galeriaPortafolio" :  ["a1", "a1", "a1", "a1", "a1", "a1"],
             "textoPortafolio" : "Portada2",
-            "descripcionPortafolio" : "Descripcion1",
+            "descripcionPortafolio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
             "categoriaPortafolio" : ["MyBB", "Wordpress", "Drupal"],
         },
         {
             "imagenPortfolio" : "a1",
+            "galeriaPortafolio" :  ["a1", "a1", "a1", "a1", "a1", "a1"],
             "textoPortafolio" : "Portada3",
-            "descripcionPortafolio" : "Descripcion1",
+            "descripcionPortafolio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
             "categoriaPortafolio" : ["MyBB", "Wordpress", "Drupal"],
         },
         {
             "imagenPortfolio" : "a1",
+            "galeriaPortafolio" :  ["a1", "a1", "a1", "a1", "a1", "a1"],
             "textoPortafolio" : "Portada4",
-            "descripcionPortafolio" : "Descripcion1",
+            "descripcionPortafolio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
             "categoriaPortafolio" : ["MyBB", "Wordpress", "Drupal"],
         },
         {
             "imagenPortfolio" : "a1",
+            "galeriaPortafolio" : ["a1", "a1", "a1", "a1", "a1", "a1"],
             "textoPortafolio" : "Portada5",
-            "descripcionPortafolio" : "Descripcion1",
+            "descripcionPortafolio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
             "categoriaPortafolio" : ["MyBB", "Wordpress", "Drupal"],
         },
         {
             "imagenPortfolio" : "a1",
+            "galeriaPortafolio" :  ["a1", "a1", "a1", "a1", "a1", "a1"],
             "textoPortafolio" : "Portada6",
-            "descripcionPortafolio" : "Descripcion1",
+            "descripcionPortafolio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
             "categoriaPortafolio" : ["MyBB", "Wordpress", "Drupal"],
         },
         {
             "imagenPortfolio" : "a1",
+            "galeriaPortafolio" :  ["a1", "a1", "a1", "a1", "a1", "a1"],
             "textoPortafolio" : "Portada7",
-            "descripcionPortafolio" : "Descripcion1",
+            "descripcionPortafolio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
             "categoriaPortafolio" : ["MyBB", "Wordpress", "Drupal"],
         },
         {
             "imagenPortfolio" : "a1",
+            "galeriaPortafolio" : ["a1", "a1", "a1", "a1", "a1", "a1"],
             "textoPortafolio" : "Portada8",
-            "descripcionPortafolio" : "Descripcion1",
+            "descripcionPortafolio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
             "categoriaPortafolio" : ["MyBB", "Wordpress", "Drupal"],
         }
     ]

@@ -1,9 +1,21 @@
 import React from 'react';
 
-const Galeria = descripcionPortafolio => {
+const Galeria = ({obtenerFiltrado}) => {
+
+    const { galeriaPortafolio, textoPortafolio, descripcionPortafolio} = obtenerFiltrado;
+    console.log(galeriaPortafolio)
+
+    const categoriaCSS = galeriaPortafolio.map(c => {
+        return <div className="galeriaCSS"><img src={(`/img/${c}.png`)} alt={`img/${c}.png`} /></div> ;
+      });
+
     return (
         <div>
-    test
+        <div className="textoPortafolio">
+                <h1>{textoPortafolio}</h1>
+                <h2>{descripcionPortafolio}</h2>
+            </div>
+            {categoriaCSS}
         </div>
     );
 };

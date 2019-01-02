@@ -173,10 +173,35 @@ code {
 }
 
 
+.galeriaCSS {
+  border: 1px solid #dcdcdc;
+  padding: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: inline-flex;
+}
+
+
+.textoPortafolio {
+  display: block;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.textoPortafolio h1, h2 {
+  margin: 0px;
+}
+
+.textoPortafolio h2 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+
 .TituloPagina {
   height: 100px;
   line-height: 100px;
-  background: green;
+  background: #b53f35;
   font-size: 30px;
   text-align: left;
   color: white;

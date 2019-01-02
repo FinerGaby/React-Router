@@ -15,6 +15,7 @@ class CustomerContainer extends Component {
                 <Services consumirArray={consumirArray} 
                           ourServices={'Our Services'} />
                 <Portafolio 
+                urlPath={'portafolio/'}
                 portafolioTexto={'Portafolio'}
                 portafolioArray={portafolioArray} />
         </div>
