@@ -152,6 +152,11 @@ code {
   margin: 0px;
   font-size: 25px;
 }
+.informacion-portafolio a {
+  color: #ffffff;
+  text-decoration: none;
+  
+}
 
 .informacion-portafolio h2 {
   margin: 0;
@@ -195,6 +200,7 @@ code {
 .textoPortafolio h2 {
   font-size: 17px;
   margin-bottom: 10px;
+  font-weight: normal;
 }
 
 

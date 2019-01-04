@@ -17,7 +17,6 @@ const PortafolioChild = ({textoPortafolio, descripcionPortafolio, imagenPortfoli
             <div className="informacion-portafolio">
                 {categoriaCSS}
              <Link to={`${urlPath}${textoPortafolio}`}><h1>{textoPortafolio}</h1></Link>
-            <h2>{descripcionPortafolio}</h2>
             </div>
         </article>
     );
