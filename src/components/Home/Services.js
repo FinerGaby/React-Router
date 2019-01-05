@@ -1,8 +1,10 @@
 import React from 'react';
 import ServicesChild from './ServicesChild';
 
-const Services = ({consumirArray, ourServices}) => {
+const Services = ({ consumirArray, ourServices }) => {
+
     return (
+
         <div className="services">
         <div className="ourservices">{ourServices}</div>
         {

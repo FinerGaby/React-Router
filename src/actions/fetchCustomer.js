@@ -1,7 +1,7 @@
 import { FETCH_CUSTOMER } from './types';
 
 const todoArray = {
-consumirArray: [
+servicesArray: [
     {
         "imagenServices" : "WebDesing",
         "textoServices" : "What web do you",

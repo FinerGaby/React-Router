@@ -17,7 +17,7 @@ class CustomerContainer extends Component {
         <div>
         <Portada textoPortada={'"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor . '} 
                          buttonText={'Ver productos'} />
-                <Services consumirArray={customer.consumirArray} 
+                <Services consumirArray={customer.servicesArray} 
                           ourServices={'Our Services'} />
                 <Portafolio 
                 urlPath={'portafolio/'}
@@ -29,7 +29,7 @@ class CustomerContainer extends Component {
     render() {
         const {customer} = this.props;
         console.log(customer);
-        console.log(customer.consumirArray);
+        console.log(customer.servicesArray);
         return (
             <div>
                 <AppFrame  
