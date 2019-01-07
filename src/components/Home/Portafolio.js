@@ -11,7 +11,7 @@ const Portafolio = ({portafolioArray, portafolioTexto, urlPath}) => {
       <div className="portafolio">
           <div className="textoportafolio">{portafolioTexto}</div>
             {
-                portafolioArray.filter((item,index) => index < 4 ).map(item =>
+                portafolioArray && portafolioArray.length > 0 && portafolioArray.filter((item,index) => index < 4 ).map(item =>
                 <PortafolioChild
                     urlPath={urlPath}
                     key={item.textoPortafolio}

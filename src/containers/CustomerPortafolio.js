@@ -1,87 +1,29 @@
 import React, { Component } from 'react';
 import PortafolioPagina from '../components/Home/PortafolioPagina';
+import { connect } from 'react-redux';
+import { fetchCustomer } from './../actions/fetchCustomer';
 
 class CustomerPortafolio extends Component {
+
+    componentDidMount() {
+        this.props.fetchCustomer();
+    }
+
     render() {
+        const { portafolioArray } = this.props.customer;
         return (
             <React.Fragment>
             <PortafolioPagina 
                 urlPath={'portafolio/'}
-                portafolioArray={this.props.portafolioArray} />
+                portafolioArray={portafolioArray} />
             </React.Fragment>
         );
     }
 }
 
+// state
+const mapStateToProps = state => ({
+    customer: state.customer.customer
+})
 
-CustomerPortafolio.defaultProps = {
-    consumirArray: [
-        {
-            "imagenServices" : "WebDesing",
-            "textoServices" : "What web do you",
-            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-        },
-        {
-            "imagenServices" : "LogoDesign",
-            "textoServices" : "What Logo do you",
-            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-        },
-        {
-            "imagenServices" : "PrintDesign",
-            "textoServices" : "What PrintDesign do you",
-            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-        }
-    ],
-    portafolioArray: [
-        {
-            "imagenPortfolio" : "a1",
-            "textoPortafolio" : "Portada1",
-            "descripcionPortafolio" : "Descripcion1",
-            "categoriaPortafolio" : ["MyBB", "Wordpress", "Drupal"],
-        },
-        {
-            "imagenPortfolio" : "a1",
-            "textoPortafolio" : "Portada2",
-            "descripcionPortafolio" : "Descripcion1",
-            "categoriaPortafolio" : ["MyBB", "Wordpress", "Drupal"],
-        },
-        {
-            "imagenPortfolio" : "a1",
-            "textoPortafolio" : "Portada3",
-            "descripcionPortafolio" : "Descripcion1",
-            "categoriaPortafolio" : ["MyBB", "Wordpress", "Drupal"],
-        },
-        {
-            "imagenPortfolio" : "a1",
-            "textoPortafolio" : "Portada4",
-            "descripcionPortafolio" : "Descripcion1",
-            "categoriaPortafolio" : ["MyBB", "Wordpress", "Drupal"],
-        },
-        {
-            "imagenPortfolio" : "a1",
-            "textoPortafolio" : "Portada5",
-            "descripcionPortafolio" : "Descripcion1",
-            "categoriaPortafolio" : ["MyBB", "Wordpress", "Drupal"],
-        },
-        {
-            "imagenPortfolio" : "a1",
-            "textoPortafolio" : "Portada6",
-            "descripcionPortafolio" : "Descripcion1",
-            "categoriaPortafolio" : ["MyBB", "Wordpress", "Drupal"],
-        },
-        {
-            "imagenPortfolio" : "a1",
-            "textoPortafolio" : "Portada7",
-            "descripcionPortafolio" : "Descripcion1",
-            "categoriaPortafolio" : ["MyBB", "Wordpress", "Drupal"],
-        },
-        {
-            "imagenPortfolio" : "a1",
-            "textoPortafolio" : "Portada8",
-            "descripcionPortafolio" : "Descripcion1",
-            "categoriaPortafolio" : ["MyBB", "Wordpress", "Drupal"],
-        }
-    ]
-}
-
-export default CustomerPortafolio;
+export default connect(mapStateToProps, { fetchCustomer })(CustomerPortafolio) ;

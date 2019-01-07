@@ -12,7 +12,7 @@ const PortafolioPagina = ({portafolioArray, urlPath}) => {
       <div>
       <TituloPagina tituloPagina='Portafolio' />
             {
-                portafolioArray.map(item =>
+                portafolioArray && portafolioArray.length > 0 && portafolioArray.map(item =>
                 <PortafolioChild
                     urlPath={urlPath}
                     key={item.textoPortafolio}
